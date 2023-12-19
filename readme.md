@@ -1,12 +1,12 @@
 # Co-creation Space - Code Release
 
-## Introduction
+## I. Introduction
 
 We are excited to announce that our paper, titled "Scalable Geometric Fracture Assembly via Co-creation Space among Assemblers", has been accepted by the AAAI 2024. In line with our commitment to open science and reproducible research, we are preparing to release the code associated with our findings. `Co-creation Space`(CSS) is based on [Multi-Part Shape Assembly](https://github.com/Wuziyi616/multi_part_assembly).
 
-## Traing codes
+## II. Traing codes
 
-### Data Preparation
+### 2.1 Data Preparation
 
 Please visit [link](https://github.com/Wuziyi616/multi_part_assembly/blob/master/docs/install.md#data-preparation) for instructions on how to download these datasets.
 
@@ -14,7 +14,7 @@ Please visit [link](https://github.com/Wuziyi616/multi_part_assembly/blob/master
 -   [Breaking-Bad](https://breaking-bad-dataset.github.io/) (geometric assembly)
 
 
-### Virtual Environment Installation
+### 2.2 Virtual Environment Installation
 ```shell
 conda create -n ccs python=3.8.5
 conda activate ccs
@@ -33,35 +33,29 @@ pip install ninja
 ```
 
 
-### Module Installation
+### 2.3 Module Installation
 
 1. Run `pip install -e .` to install this module
 2. Go to `multi_part_assembly/utils/chamfer` and run `pip install -e .`
 3. Go to `multi_part_assembly/models/modules/encoder/pointnet2/pointnet2_ops_lib` and run `pip install -e .`
 
 
-### Train Scripts
+### 2.4 Train Scripts
 ```shell
-python scripts/train.py --project_name debug --gpu 0 --cfg configs/wx_transformer/wx_transformer/wx_transformer-32x1-cosine_400e-partnet_chair.py
+python scripts/train.py --project_name debug --gpu 0 --cfg configs/wx_transformer/wx_transformer/topk/partnet/FF-top10-partnet_chair.py
 ```
 
-## Test Codes
+## III. Test Codes
 
-### Test Scripts
+### 3.1 Test Scripts
 ```shell
 # categories = ['BeerBottle', 'Bowl', 'Cup', 'DrinkingUtensil', 'Mug', 'Plate', 'Spoon', 'Teacup', 'ToyFigure', 'WineBottle', 'Bottle', 'Cookie', 'DrinkBottle', 'Mirror', 'PillBottle', 'Ring', 'Statue', 'Teapot', 'Vase', 'WineGlass']
-python scripts/test.py --gpus 0 --category BeerBottle --cfg_file configs/moe_net/cvpr2023/04-everyday/nc-moe-256x2-everyday_v3.py --weight checkpoint/nc-moe-256x2-everyday_v3/models/model-epoch=484.ckpt --min_num_part 1 --max_num_part 20
+python scripts/test.py --gpus 0 --category BeerBottle --cfg_file configs/wx_transformer/wx_transformer/topk/partnet/FF-top10-partnet_chair.py --weight checkpoint/FF-top10-partnet_chair/models/model-epoch=499.ckpt --min_num_part 1 --max_num_part 20
 
 ```
 
 
-### Visual Scripts
-```
-
-```
-
-
-## Code Release Plan
+## IV. Code Release Plan
 
 Our code release will be structured in the following phases to ensure quality and ease of use:
 
@@ -71,7 +65,7 @@ Our code release will be structured in the following phases to ensure quality an
 
 3. **Documentation and Usage Instructions**: To facilitate the use of our code and models, comprehensive documentation will be provided. This will include detailed instructions on how to set up the environment, run the code, and replicate our experiments.
 
-## Estimated Timeline
+## V. Estimated Timeline
 
 We are currently in the process of preparing the code for release. While we cannot provide an exact release date at this moment, we are targeting to complete the release process in the following order:
 
@@ -79,17 +73,17 @@ We are currently in the process of preparing the code for release. While we cann
 - Checkpoints: [Estimated 25/12/2023]
 - Documentation: [Estimated 30/12/2023]
 
-## Stay Updated
+## VI. Stay Updated
 
 To stay updated on our code release and other project news, please:
 
 - Follow our [GitHub repository](#)
 - Contact us at zhangruiyuan.0122@gmail.com (or zhangruiyuan@zju.edu.cn)
 
-## License
+## VII. License
 
 This project is released under the [MIT license](LICENSE).
 
-## Acknowledgements
+## VIII. Acknowledgements
 
 We would like to thank the AAAI reviewers and our colleagues who have contributed to this research. We are looking forward to sharing our work with the community and hope it will be a valuable resource. We also thank the benchmark provided by [Ziyi Wu](https://github.com/Wuziyi616).
