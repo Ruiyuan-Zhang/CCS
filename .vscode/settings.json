@@ -1,0 +1,6 @@
+{
+    "python.analysis.typeCheckingMode": "basic",
+    "search.exclude": {
+        "**/configs": true
+    }
+}
