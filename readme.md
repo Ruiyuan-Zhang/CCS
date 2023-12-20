@@ -2,7 +2,7 @@
 
 ## I. Introduction
 
-We are excited to announce that our paper, titled "Scalable Geometric Fracture Assembly via Co-creation Space among Assemblers", has been accepted by the AAAI 2024. In line with our commitment to open science and reproducible research, we are preparing to release the code associated with our findings. `Co-creation Space`(CSS) is based on [Multi-Part Shape Assembly](https://github.com/Wuziyi616/multi_part_assembly).
+We are excited to announce that our paper, titled "[Scalable Geometric Fracture Assembly via Co-creation Space among Assemblers](https://arxiv.org/abs/2312.12340)", has been accepted by the AAAI 2024. In line with our commitment to open science and reproducible research, we are preparing to release the code associated with our findings. `Co-creation Space`(CSS) is based on [Multi-Part Shape Assembly](https://github.com/Wuziyi616/multi_part_assembly).
 
 ## II. Traing codes
 
