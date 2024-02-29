@@ -23,8 +23,9 @@ conda activate ccs
 conda install pytorch=1.10 torchvision torchaudio cudatoolkit=11.3 -c pytorch
 conda install pytorch-lightning=1.6.2  # pip install lightning
 conda install -c fvcore -c iopath -c conda-forge fvcore iopath
-conda install pytorch3d -c pytorch3d   # pip install --no-index --no-cache-dir pytorch3d -f https://dl.fbaipublicfiles.com/pytorch3d/packaging/wheels/py38_cu113_pyt1110/download.html
+pip install --no-index --no-cache-dir pytorch3d -f https://dl.fbaipublicfiles.com/pytorch3d/packaging/wheels/py38_cu113_pyt1110/download.html # conda install pytorch3d -c pytorch3d  
 
+pip install setuptools==59.5.0 
 pip install setproctitle
 pip install trimesh
 pip install wandb
